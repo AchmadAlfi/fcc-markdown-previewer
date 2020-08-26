@@ -65,14 +65,17 @@ class App extends Component {
         <div>
           <Form>
             <Form.Group controlId="formControlsTextarea">
-              <Form.Label column="lg" className="text-center font-weight-bold">
-                Markdown Input
+              <Form.Label
+                column="lg"
+                className="text-center bg-primary text-white"
+              >
+                <h1>Markdown Input</h1>
               </Form.Label>
               <Form.Control
                 id="editor"
                 as="textarea"
                 placeholder="Enter Markdown"
-                rows="3"
+                rows="10"
                 value={markdown}
                 onChange={(e) => {
                   this.updateMarkdown(e.target.value);
@@ -82,9 +85,12 @@ class App extends Component {
           </Form>
         </div>
         <div>
-          <h1 className="text-center">Markdown Output</h1>
+          <h1 className="text-center bg-success text-white py-3">
+            Markdown Output
+          </h1>
           <div
             id="preview"
+            className="border border-success px-5"
             dangerouslySetInnerHTML={{ __html: marked(markdown) }}
           ></div>
         </div>
