@@ -23,6 +23,7 @@ class App extends Component {
                 Markdown Input
               </Form.Label>
               <Form.Control
+                id="editor"
                 as="textarea"
                 placeholder="Enter Markdown"
                 rows="3"
@@ -35,8 +36,8 @@ class App extends Component {
           </Form>
         </div>
         <div>
-          <h1>Markdown Output</h1>
-          <div>{marked(markdown)}</div>
+          <h1 className="text-center">Markdown Output</h1>
+          <div dangerouslySetInnerHTML={{ __html: marked(markdown) }}></div>
         </div>
       </div>
     );
