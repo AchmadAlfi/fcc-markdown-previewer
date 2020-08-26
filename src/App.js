@@ -36,7 +36,7 @@ class App extends Component {
         </div>
         <div>
           <h1>Markdown Output</h1>
-          <div></div>
+          <div>{marked(markdown)}</div>
         </div>
       </div>
     );
