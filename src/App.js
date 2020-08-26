@@ -7,9 +7,13 @@ class App extends Component {
   state = {
     markdown: "",
   };
+  updateMarkdown = (markdown) => {
+    this.setState({ markdown });
+  };
 
   render() {
     let { markdown } = this.state;
+    console.log(markdown);
     return (
       <div className="App px-2">
         <div>
@@ -23,6 +27,9 @@ class App extends Component {
                 placeholder="Enter Markdown"
                 rows="3"
                 value={markdown}
+                onChange={(e) => {
+                  this.updateMarkdown(e.target.value);
+                }}
               ></Form.Control>
             </Form.Group>
           </Form>
