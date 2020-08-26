@@ -90,7 +90,7 @@ class App extends Component {
           </h1>
           <div
             id="preview"
-            className="border border-success px-5"
+            className="border border-success px-5 rounded mb-3"
             dangerouslySetInnerHTML={{ __html: marked(markdown) }}
           ></div>
         </div>
