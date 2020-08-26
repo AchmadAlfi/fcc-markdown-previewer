@@ -37,7 +37,10 @@ class App extends Component {
         </div>
         <div>
           <h1 className="text-center">Markdown Output</h1>
-          <div dangerouslySetInnerHTML={{ __html: marked(markdown) }}></div>
+          <div
+            id="preview"
+            dangerouslySetInnerHTML={{ __html: marked(markdown) }}
+          ></div>
         </div>
       </div>
     );
